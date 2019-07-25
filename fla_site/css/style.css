@@ -1,0 +1,836 @@
+/*ОБЩИЕ СВОЙСТВА*/
+body {
+	margin: 0 auto;
+	width: 1920px;/*Как это свойство дает неразьезжаемость фото?*/
+}
+#background {
+	position: absolute;
+	width: 1920px;
+	background-color: #F5F5F5;
+	z-index: -2; /*Почему z-index не влияет?*/
+}
+header {
+	margin: 0 auto;
+	max-width: 1920px;
+	height: 826px;
+}
+footer {
+	display: table;
+	height: 80px;
+}
+a {
+	text-decoration: none;
+}
+/*КЛАССЫ*********************************************************/
+.main_screen {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 1172px;
+}
+.block_1x { /*Почему display: table делает отступы межжду блоками?
+	*/
+	float: left;
+	width: 293px;
+	height: 293px;
+	background-color: #ffffff;
+}
+.block_2x {
+	float: left;
+	width: 586px;
+	height: 293px;
+	background-color: #ffffff;
+}
+.p_r {
+	position: relative;
+}
+.p_a {
+	position: absolute;
+}
+.grid1 {
+	margin: 0 auto;
+	width: 233px;
+}
+.grid2 {
+	margin: 0 auto;
+	width: 526px;
+}
+.big_text {
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 22px;
+	font-size: 18px;
+	color: #363636;
+}
+.line_text {
+	margin-top: 20px;
+	width: 40px;
+	height: 5px;
+	background-color: #363636;
+}
+.small_text {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-family: Arial;
+	line-height: 22px;
+	font-size: 14px;
+	color: #A0A0A0;
+}
+.square_div {
+	display: table;
+	text-align: center;
+	margin: 0 auto;
+	width: 293px;
+	height: 98px;
+	font-size: 0px;
+}
+.square_content {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.square_text1 { /*Почему не работает margin-top?*/
+	display: inline;
+	margin: 0;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 36px;
+	color: #363636;
+}
+.square_text2 { /*Почему не работает margin-top?*/
+	display: inline;
+	margin: 0;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 25px;
+	color: #363636;
+}
+.square_img_text {
+	margin-top: 19px;
+	margin-bottom: 0px;
+	font-family: Arial;
+	font-size: 12px;
+	color: #ffffff;
+}
+.arrow_right { /*Почему при приближени или отдалении появляются
+	артефакты?*/
+	background: url(../img/right.png);
+	margin-top: 49px;
+	width: 21.4px; /*22px должна быть*/
+	height: 28px;
+	display: inline-block;
+}
+.arrow_right:hover {
+	background: url(../img/left_hover.png);
+	transform: scale(-1, 1);
+}
+.arrow_left { /*Почему при приближени или отдалении появляются
+	артефакты?*/
+	background: url(../img/right.png);
+	margin-top: 20px;
+	width: 21.6px; /*22px должна быть*/
+	height: 28px;
+	transform: scale(-1, 1);
+	display: inline-block;
+}
+.arrow_left:hover {
+	background: url(../img/left_hover.png);
+	transform: scale(1, 1);
+}
+.wide_aligned {
+	display: table;
+}
+.wide_content {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.wide_img {
+	margin-top: 30px;
+}
+.wide_name {
+	margin-top: 21px;
+	margin-bottom: 0;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	color: #363636;
+}
+.wide_stars {
+	margin-top: 16px;
+}
+.wide_text {
+	margin-top: 16px;
+	margin-bottom: 0;
+	font-family: Arial;
+	font-size: 14px;
+	color: #A0A0A0;
+}
+.block_img_icon {
+	margin-top: 30px;
+}
+.block_img_text1 {
+	margin-top: 42px;
+	font-size: 36px;
+	color: #707070;
+}
+.block_img_text2 {
+	margin-top: 10px;
+	color: #A0A0A0;
+}
+.button_menu {
+	display: inline-block;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+	margin-top: 37px;
+	width: 27px;
+	height: 5px;
+	background-color: #989483;
+}
+.button_menu:hover {
+	background-color: #363636;
+}
+.blue_color {
+	color: #3E98DA;
+}
+.gray_color {
+  	color: #9B9B9B;
+}
+.gray_color:hover {
+  	color: #3E98DA;
+}
+.rotate1 {
+	transform: rotate(180deg);
+	transition-duration: 300ms;
+}
+/** {
+	outline: 1px red solid;
+	outline-offset: -1px;
+}*/
+/*ФОНОВЫЕ IMG****************************************************/
+#div_img1 {
+	position: absolute;
+	width: 1920px;
+	height: 826px;
+	background-color: #D7D7D7;
+	z-index: -1 /*Почему когда убираешь z-index, пропадает header
+	и квадрат?*/
+}
+#div_img2 {
+	opacity: 0.225;
+	position: absolute;
+	margin-left: 1253px;
+	width: 667px;
+	height: 826px;
+	background-color: #282828;
+	z-index: -1; /*Почему когда убираешь z-index, пропадает header
+	и квадрат?*/
+}
+/*HEADER*********************************************************/
+#header {
+	padding-top: 29px;
+	/*Почему margin двигает задние блоки? Из-за того,
+	что мы двигаем от экрана?*/
+}
+#fdn_logo {
+	float: left;
+}
+#imh4 {
+	position: relative;
+	float: right;
+	margin-top: 30.5px;
+	margin-left: 25px;
+}
+#shop_icon {
+	float: right;
+	position: relative;
+	margin-top: 20px;
+	margin-left: 39px;
+	width: 38px;
+	height: 33px;
+}
+#imh3 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#shop_rectangle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 21px;
+	height: 16px;
+	background-color: #FCE300;
+}
+#shop_num {
+	position: absolute;
+	display: inline;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	margin: 0;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;
+}
+#imh2 {
+	float: right;
+	margin-top: 33px;
+	margin-left: 44px;
+}
+#imh1 {
+	float: right;
+	margin-top: 31.5px;
+}
+#menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	box-shadow: -30px 0 30px rgba(0,0,0,0.05);
+	width: 313px;
+	height: 100%;
+	background-color: white;
+	z-index: 10;
+}
+.active {
+	display: none;
+}
+.menu_screen {
+	margin: 0 auto;
+	width: 253px;
+	height: 100%;
+}
+#menu_text1 {
+	margin-top: 0;
+	padding-top: 63px;
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #363636;
+}
+#mtext_1 {
+	margin-top: 47px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+	border-bottom: 1px solid #E6E6E6;
+}
+#mtext_1:hover {
+	color: #3E98DA;
+}
+.menu_ntext {
+	height: 48px;
+	margin: 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+	border-bottom: 1px solid #E6E6E6;
+}
+.menu_ntext:hover {
+	color: #3E98DA;
+}
+.menu_mtext {
+	position: absolute;
+	margin: 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+}
+.menu_mtext:hover {
+	color: #3E98DA;
+}
+.menu_ltext {
+	margin: 13px 0 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+}
+.menu_ltext1 {
+	margin: 42px 0 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+}
+.menu_ltext2 {
+	margin: 18px 0 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+}
+.menu_ltext3 {
+	margin: 18px 0 0;
+	font-family: Arial;
+	font-size: 16px;
+	color: #3E98DA;
+
+}
+.search_menu {
+	margin-top: 88px;
+	width: 251px;
+	height: 44px;
+	border: 1px solid #E6E6E6;
+}
+
+#search_m {
+	width: 199px;
+	margin-top: 13px;
+	margin-bottom: 13px;
+	margin-left: 13px;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+	background: transparent;
+	border: none;
+	outline: 0;
+    outline-offset: 0;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+.menu_ntext p {
+	margin: 0;
+	padding: 15px 0 15px;
+}
+#s {
+	padding: 15px 191.641px 15px 0;
+}
+#ow {
+	padding: 15px 176.844px 15px 0;
+}
+#ne {
+	padding: 15px 146.283px 15px 0;
+}
+#sh {
+	padding: 15px 215.625px 15px 0;
+}
+#m_l{
+	border-bottom: 1px solid #E6E6E6;
+}
+.t_pd {
+	margin: 0;
+	padding:7.5px 0 7.5px 20px;
+	font-family: Arial;
+	font-size: 16px;
+	color: #A0A0A0;
+}
+.t_pdfirst {
+	padding:15px 0 7.5px 20px;
+}
+.t_pdlast {
+	padding:7.5px 0 15px 20px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.t_pd:hover {
+	color: #3E98DA;
+}
+.menu_b {
+	height: 48px;
+	cursor: pointer;
+	border-bottom: 1px solid #E6E6E6;
+}
+#map_point {
+	margin-top: 78px;
+	display: block;
+}
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.arrow_menu {
+	position: absolute;
+	margin: 20.5px 0 20.5px 248px;
+	width: 5px;
+	height: 7px;
+	background-image: url(../img/arrow_left.png);
+	z-index: -1;
+}
+.rotate {
+	transform: rotate(90deg);
+}
+
+.red {
+	color: red;
+}
+/*КОЛОНА_1*******************************************************/
+#column1 {
+	margin-top: 128px; /*Почему margin так странно отображается?*/
+}
+#block_text1 {
+	opacity: 0.8;
+	float: left;
+	background-color: #FBE300;
+}
+#text1_big {
+	margin-top: 33px;
+	line-height: 36px;
+	font-size: 30px;
+}
+#text1_line {
+	margin-top: 13px;
+}
+#text1_small {
+	margin-top: 16px;
+	color: #363636;
+}
+#button1 {
+	margin-top: 35px;
+	width: 123px;
+	height: 46px;
+	background-color: #363636;
+}
+#button1_text {
+	margin-bottom: 0px;
+	padding-left: 24.828px;
+	padding-right: 24.828px;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 46px;
+	font-size: 12px;
+	color: #ffffff;
+}
+#button1_text:hover {
+	background-color: #3E98DA;
+}
+#square1 {
+	float: right;
+}
+/*КОЛОНА_2*******************************************************/
+#square2 {
+	display: table;
+	opacity: 0.9;
+	margin-left: 586px;
+	background-color: #3E98DA;
+}
+/*КОЛОНА_3*******************************************************/
+#c3_text_big {
+	line-height: 34px;
+	font-size: 28px;
+}
+#c3_2 {
+	background-color: #D7D7D7;
+}
+#c3_4 {
+	background-color: #D7D7D7;
+}
+/*КОЛОНА_4*******************************************************/
+#c4_3 {
+	background-color: #D7D7D7;
+}
+/*КОЛОНА_5*******************************************************/
+#column5 { /*Почему если не указать здесь ширину и высоту блок не
+	будет виден в консоли как наполненный?*/
+	width: 1920px;
+	height: 293px;
+}
+#c5_1 {
+	display: table;
+	margin-left: 374px;
+	background-color: #FBE300;
+}
+#c5_1 p {
+	color: #363636;
+}
+#c5_2 {
+	display: table;
+	background-color: #3E98DA;
+}
+#c5_3{
+	float: left;
+	width: 960px;
+	height: 293px;
+	background-color: #282828;
+}
+#search {
+	width: 586px;
+	height: 293px;
+}
+#search_content {
+	display: table;
+	height: 293px;
+}
+#search1 {
+	float: left;
+	margin-left: 10px;
+	width: 286.719px;
+	background: transparent;
+	border: none;
+	color: white;
+}
+#search_b1 {
+	float: right;
+	width: 19px;
+	height: 19px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	background-image: url(../img/search.png);
+}
+#search_b1_menu {
+	margin-top: 12.5px;
+	margin-right: 10px;
+	margin-bottom: 12.5px;
+	margin-left: 10px;
+	float: right;
+	width: 19px;
+	height: 19px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	background-image: url(../img/search2.png);
+}
+#s_c {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+#s_c_1 {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+}
+#s_c_2 {
+	float: right;
+}
+#hr {
+	position: absolute;
+	margin-top: 26px;
+	width: 526px;
+}
+/*КОЛОНА_6*******************************************************/
+#c6_2 {
+	background-color: #D7D7D7;
+}
+#text2 { /*Если не указать то class p_a не сработает, почему?*/
+	width: 586px;
+	height: 293px;
+}
+#text2_big {
+	margin-top: 33px;
+	line-height: 36px;
+	font-size: 30px;
+}
+#text2_line {
+	margin-top: 13px;
+}
+#text2_small {
+	margin-top: 16px;
+	color: #363636;
+}
+#button2 {
+	margin-top: 35px;
+	width: 161px;
+	height: 46px;
+	background-color: #363636;
+}
+#button2_text {
+	margin-bottom: 0px;
+	padding-left: 24px;
+	padding-right: 24px;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 46px;
+	font-size: 12px;
+	color: #ffffff;
+}
+#button2_text:hover {
+	background-color: #3E98DA;
+}
+/*КОЛОНА_7*******************************************************/
+#c7_1 {
+	outline: 4px #F8E300 dashed;
+	outline-offset: -4px;
+	font-size: 0; /*Для кнопок ниже (от inline)*/
+}
+#c7_1_st {
+	color: #777462;
+}
+#c7_3 {
+	background-color: #D7D7D7;
+}
+#img_box1 {
+	width: 293px;
+	height: 293px;
+}
+/*КОЛОНА_8*******************************************************/
+#c8_1 {
+	font-size: 0;
+	background-color: #3E98DA;
+}
+#c8_1_text1 {
+	font-size: 28px;
+	color: #ffffff;
+}
+#c8_1_text2 {
+	margin-top: 41px;
+	color: #94CFFD;
+}
+#c8_1_text3 {
+	margin-top: 14px;
+	color: #ffffff;
+}
+#c8_1_text4 {
+	margin-top: 28px;
+	color: #94CFFD;
+}
+#c8_1_button1 {
+	background-color: #5EADE2;
+}
+#c8_1_button1:hover {
+	background-color: #ffffff;
+}
+#c8_1_button2 {
+	background-color: #5EADE2;
+}
+#c8_1_button2:hover {
+	background-color: #ffffff;
+}
+#c8_1_button3 {
+	background-color: #5EADE2;
+}
+#c8_1_button3:hover {
+	background-color: #ffffff;
+}
+#c8_3 {
+	background-color: #D7D7D7;
+}
+#img_box2 {
+	width: 293px;
+	height: 293px;
+}
+/*КОЛОНА_9*******************************************************/
+#column9 {
+	margin: 0 auto;
+	width: 1172px;
+	height: 586px;
+}
+#big_boy {
+	margin-left: 293px;
+	background-color: #D7D7D7;
+}
+#left_screen {
+	float: left;
+	width: 293px;
+	height: 586px;
+}
+#bb_1_1 {
+	float: left;
+	height: 586px;
+}
+#c9_text1_big {
+	line-height: 34px;
+	font-size: 28px;
+}
+#bb_st_2 {
+	margin-top: 31px;
+}
+#button3 {
+	margin-top: 75px;
+	width: 137px;
+	height: 46px;
+	background-color: #FBE300;
+}
+#button3_text {
+	margin-bottom: 0px;
+	padding-left: 21.5px;
+	padding-right: 21.5px;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 46px;
+	font-size: 12px;
+	color: #363636;
+}
+#button3_text:hover {
+	background-color: #3E98DA;
+	color: #ffffff;
+}
+#right_screen {
+	float: right;
+	width: 879px;
+	height: 586px;
+}
+#right_screen_small {
+	width: 879px;
+	height: 293px;
+}
+#bb_2_1 {
+	float: right;
+	display: table;
+	background-color: #FBE300;
+}
+#bb_2_1_text {
+	color: #363636;
+}
+#bb_2_2 {
+	float: right;
+	background-color: #3E98DA;
+}
+#c9_text2_big {
+	text-align: left;
+	line-height: 34px;
+	font-size: 28px;
+	color: #ffffff;
+}
+#c9_line_white {
+	background-color: #ffffff;
+}
+#bb_2_3 {
+	float: right;
+}
+#email {
+	width: 213px;
+	height: 46px;
+	display: table-cell;
+	border: none;
+	padding-left: 20px;
+}
+input::-moz-placeholder { color: #66AAD8; }
+input::-webkit-input-placeholder { color: #66AAD8; }
+#sign_up {
+	float: right;
+	/*margin-bottom: 0;*/
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+#sub1 {
+	width: 233px;
+}
+#sub2 {
+	width: 233px;
+}
+#sub3 {
+	width: 233px;
+}
+#f_l {
+	float: left;
+	display: inline;
+	font-family: Arial;
+	font-size: 12px;
+	color: #9B9B9B;
+}
+#f_r {
+	float: right;
+	font-family: Arial;
+	font-size: 12px;
+	color: #9B9B9B;
+}
+#f_r li {
+	display: inline;
+	margin-left: 22px;
+}
+#f_middle {
+	display: table-cell;
+	vertical-align: middle;
+}
